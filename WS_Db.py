@@ -2,7 +2,7 @@ import psycopg2 as pg
 
 
 def create():
-    conn=pg.connect(" dbname='real_estate' user='postgres' password='Admin' host='localhost' port='5432'")
+    conn=pg.connect(" dbname='db_name' user='postgres' password='Admin' host='localhost' port='5432'")
     cur=conn.cursor()
     cur.execute(" CREATE TABLE IF NOT EXISTS rawdata ( Title TEXT,Ad_by TEXT,offers TEXT,rate TEXT,per_sqft INTEGER ) ")
     conn.commit()
